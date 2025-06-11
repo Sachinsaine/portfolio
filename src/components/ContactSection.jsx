@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
@@ -20,7 +20,7 @@ export default function ContactSection() {
         <div className="left w-1/2 flex items-center justify-center -mb-36">
           <div className="w-full md:w-[80%] mb-8 md:mb-0 text-center md:text-left">
             <h2 className="md:text-5xl  sm:text-4xl text-3xl  font-bold mb-8 text-[#D4A03E]">
-              Let's Catch Up!
+              Let&apos;s Catch Up!
             </h2>
 
             <p className="mb-6 text-lg  text-white ">
@@ -30,7 +30,7 @@ export default function ContactSection() {
             <p className="mb-6 text-lg text-white ">
               Alternatively, check out my{" "}
               <a
-                href="/AayushKakkar_Resume.pdf"
+                href="/"
                 download
                 className="text-[#D4A03E] mt-5 cursor-pointer hover:underline  "
               >
