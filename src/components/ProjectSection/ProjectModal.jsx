@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 export default function ProjectModal({ project, onClose }) {
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -8,19 +8,21 @@ export default function ProjectModal({ project, onClose }) {
   };
 
   const prevImage = () => {
-    setCurrentImage((currentImage - 1 + project.images.length) % project.images.length);
+    setCurrentImage(
+      (currentImage - 1 + project.images.length) % project.images.length
+    );
   };
 
   // Close modal on "Esc" key press
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         onClose();
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [onClose]);
 
@@ -47,7 +49,7 @@ export default function ProjectModal({ project, onClose }) {
             src={project.images[currentImage]}
             alt={`${project.name} Slide`}
             className="w-full h-60 object-cover rounded-lg    "
-            loading='lazy'
+            loading="lazy"
           />
           <button
             onClick={prevImage}
@@ -71,7 +73,10 @@ export default function ProjectModal({ project, onClose }) {
           {/* Tech Stack */}
           <div className="mb-4 flex gap-2">
             {project.techStack.map((tech, index) => (
-              <span key={index} className="px-2 text-white py-1 rounded-lg text-xs bg-gray-500">
+              <span
+                key={index}
+                className="px-2 text-white py-1 rounded-lg text-xs bg-gray-500"
+              >
                 {tech}
               </span>
             ))}
@@ -90,6 +95,7 @@ export default function ProjectModal({ project, onClose }) {
           </div>
         </div>
       </div>
-    </div>, document.getElementById('modal-root')
+    </div>,
+    document.getElementById("modal-root")
   );
 }

@@ -5,6 +5,7 @@ import bgVideo from "../../assets/bg.mp4";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
+// eslint-disable-next-line react/prop-types
 export default function HeroSection({ abtref }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
@@ -41,7 +42,9 @@ export default function HeroSection({ abtref }) {
   }, []);
 
   function handleScrollAbout() {
+    // eslint-disable-next-line react/prop-types
     if (abtref.current) {
+      // eslint-disable-next-line react/prop-types
       abtref.current.scrollIntoView({ behavior: "smooth" });
     }
   }

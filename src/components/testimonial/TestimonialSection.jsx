@@ -1,5 +1,5 @@
 import "./Testimonial.css";
-import React, { useState, useEffect, useContext, useCallback } from "react";
+import { useState, useEffect, useContext, useCallback } from "react";
 
 import { ToggleContext } from "../../store/Toggle-Context";
 
@@ -169,15 +169,15 @@ export default function TestimonialSection() {
             className="absolute left-0 h-[50%] top-[30%] w-3/4 md:w-2/5 lg:w-1/3 bg-white/30 backdrop-blur-lg text-[black] rounded-lg p-6 z-30 shadow-lg overflow-y-auto"
           >
             <h2 className="text-2xl font-bold text-[#D4A03E] mb-4">
-              AI's Perspective
+              AI&apos;s Perspective
             </h2>
             <p className="text-md leading-relaxed font-semibold italic text-gray-800">
-              "Sachin stands out as an exceptional talent in technology. His
-              innovative thinking and passion are evident in every project, as
-              he effortlessly translates complex concepts into user-friendly
-              solutions. Sachin's dedication to learning and applying new
+              &quot;Sachin stands out as an exceptional talent in technology.
+              His innovative thinking and passion are evident in every project,
+              as he effortlessly translates complex concepts into user-friendly
+              solutions. Sachin&apos;s dedication to learning and applying new
               technologies will undoubtedly drive meaningful change in the
-              industry."
+              industry.&quot;
             </p>
             <button
               onClick={() => setIsAIPanelOpen(false)}

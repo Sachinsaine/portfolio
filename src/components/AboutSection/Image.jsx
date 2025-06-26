@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useState } from "react";
 // import sachinImg from "../../assets/sachin.jpg";
 import sachinImage from "../../assets/sachinImage.png";

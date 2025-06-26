@@ -1,6 +1,6 @@
 // src/components/LoadingScreen.js
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const LoadingScreen = () => {
   const [percentage, setPercentage] = useState(0);
@@ -12,7 +12,7 @@ const LoadingScreen = () => {
     "Please wait... Recharging caffeine levels.",
     "Almost there! Just convincing electrons to move faster.",
     "Waiting for chai to brew is easier than waiting for this to load!",
-    "Hold on, we're building something amazing! Or breaking something… one of those."
+    "Hold on, we're building something amazing! Or breaking something… one of those.",
   ];
 
   // Shuffle quotes function
@@ -29,6 +29,7 @@ const LoadingScreen = () => {
   // Shuffle quotes on component mount
   useEffect(() => {
     setQuotes(shuffleArray([...originalQuotes]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Update loading percentage
@@ -51,7 +52,7 @@ const LoadingScreen = () => {
   useEffect(() => {
     const quoteInterval = setInterval(() => {
       setQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-    }, 4000); 
+    }, 4000);
 
     return () => clearInterval(quoteInterval);
   }, [quotes.length]); // Add quotes.length dependency to ensure it works after shuffling
